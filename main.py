@@ -5,7 +5,7 @@ import os
 
 tk = Tk()
 tk.title("파일 이름 변환기")
-tk.geometry("400x400")
+tk.geometry("550x400")
 
 
 # 파일탐색기 열어서 경로 가져오기
@@ -71,7 +71,7 @@ def change_string():
 
 
 directory_path_label = Label(tk, text="폴더 경로")
-button = Button(tk, text="경로 불러오기", command=load_path, fg="#fff", bg="#B404AE")
+load_button = Button(tk, text="경로 불러오기", command=load_path, fg="#fff", bg="#B404AE")
 directory_path = Label(tk, text="/")
 
 
@@ -82,7 +82,7 @@ file_name_before_input = Entry(tk)
 file_name_after_label = Label(tk, text="변경될 문자")
 file_name_after_input = Entry(tk)
 
-predict_file_names = Listbox(tk, width=50, height=10)
+predict_file_names = Listbox(tk, width=75, height=10)
 preview_button = Button(
     tk, text="미리보기", command=change_string_preview, fg="#fff", bg="#04B404"
 )
@@ -93,7 +93,7 @@ change_button = Button(
 
 directory_path_label.grid(row=0, column=0, padx=10, pady=10)
 directory_path.grid(row=0, column=1)
-button.grid(row=0, column=2)
+load_button.grid(row=0, column=2)
 file_name_before_label.grid(row=1, column=0, padx=10, pady=10)
 file_name_before_input.grid(row=1, column=1)
 file_name_after_label.grid(row=2, column=0, padx=10, pady=10)
